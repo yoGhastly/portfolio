@@ -21,7 +21,7 @@ export default function Home() {
           "after:dark:opacity-40 before:lg:h-[360px] z-[-1]",
         )}
       >
-        <h1 className="text-[clamp(40px, 11vw, 40px)] font-bold">
+        <h1 className="text-[clamp(40px, 11vw, 40px)] font-bold text-black">
           Diego Espinosa
         </h1>
       </div>
@@ -42,11 +42,11 @@ export default function Home() {
           </p>
           <Chip label="Open for new projects in 2024" />
           <div className="flex items-center justify-between max-w-md">
-            <p className="text-sm text-gray-300 flex gap-5">
+            <p className="text-sm text-gray-600 dark:text-gray-300 flex gap-5">
               Frontend engineer
-              <span className="text-white">UX Labs.</span>
+              <span className="text-black dark:text-white">UX Labs.</span>
             </p>
-            <p className="text-sm text-gray-300">2023</p>
+            <p className="text-sm text-gray-600 dark:text-gray-300">2023</p>
           </div>
           <hr className="text-gray-800 opacity-30 h-0.5 max-w-md" />
           <h2 className="font-semibold">Selected Projects</h2>
