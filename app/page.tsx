@@ -21,7 +21,7 @@ export default function Home() {
           "after:dark:opacity-40 before:lg:h-[360px] z-[-1]",
         )}
       >
-        <h1 className="text-[clamp(40px, 11vw, 40px)] font-bold text-black dark:text-white">
+        <h1 className="text-[clamp(40px, 11vw, 40px)] font-bold text-gray-900 dark:text-white">
           Diego Espinosa
         </h1>
       </div>
@@ -48,7 +48,7 @@ export default function Home() {
             </p>
             <p className="text-sm text-gray-600 dark:text-gray-300">2023</p>
           </div>
-          <hr className="text-gray-600 dark:text-gray-800 opacity-30 h-0.5 max-w-md" />
+          <hr className="bg-gray-600 dark:bg-gray-300 opacity-30 h-0.5 max-w-md" />
           <h2 className="font-semibold">Selected Projects</h2>
           <ul className="mx-auto px-8 md:px-0">
             <li className="list-disc">
