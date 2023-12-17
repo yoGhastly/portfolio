@@ -21,7 +21,7 @@ export default function Home() {
           "after:dark:opacity-40 before:lg:h-[360px] z-[-1]",
         )}
       >
-        <h1 className="text-[clamp(40px, 11vw, 40px)] font-bold text-[#111111] dark:text-white">
+        <h1 className="text-[clamp(40px, 11vw, 40px)] font-bold text-[#010101] dark:text-white">
           Diego Espinosa
         </h1>
       </div>
