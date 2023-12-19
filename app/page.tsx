@@ -1,7 +1,6 @@
-import clsx from "clsx";
-import Image from "next/image";
-import { Chip } from "./components/Chip";
 import Link from "next/link";
+import clsx from "clsx";
+import { Chip } from "./components/Chip";
 
 export default function Home() {
   return (
@@ -11,7 +10,7 @@ export default function Home() {
           "relative flex place-items-center",
           "before:absolute before:h-[300px] before:w-[480px]",
           "before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial",
-          "before:from-white before:to-transparent ",
+          "before:from-transparent before:to-transparent ",
           "before:blur-2xl before:content-[''] after:absolute",
           "after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3",
           "after:bg-gradient-conic after:from-[#d92f60]",
@@ -51,25 +50,25 @@ export default function Home() {
           <hr className="bg-gray-600 dark:bg-gray-300 opacity-30 h-0.5 max-w-md" />
           <h2 className="font-semibold">Selected Projects</h2>
           <ul className="mx-auto px-8 md:px-0">
-            <li className="list-disc">
+            <li className="list-disc hover:underline">
               <Link href="https://www.xervsware.com" target="_blank">
                 <span className="font-bold">Xervsware</span>, a team that loves
                 to build tech solutions.
               </Link>
             </li>
-            <li className="list-disc">
+            <li className="list-disc hover:underline">
               <Link href="https://expo.dev/@ghastly/ad-astra" target="_blank">
                 <span className="font-bold">Ad astra</span>, a mental health app
                 for astronomy enthusiasts.
               </Link>
             </li>
-            <li className="list-disc">
+            <li className="list-disc hover:underline">
               <Link href="https://gea-platform.vercel.app" target="_blank">
                 <span className="font-bold">GEA Platform</span>, a platform for
                 engineering students.{" "}
               </Link>
             </li>
-            <li className="list-disc">
+            <li className="list-disc hover:underline">
               <Link href="https://geits.tech" target="_blank">
                 <span className="font-bold">GEITS</span>, a platform for
                 software engineering students.{" "}
@@ -78,7 +77,7 @@ export default function Home() {
           </ul>
           <Link
             href="https://github.com/yoGhastly"
-            className="hover:text-gray-300 w-fit"
+            className="hover:text-gray-300 w-fit hover:underline"
             target="_blank"
           >
             See all projects.
