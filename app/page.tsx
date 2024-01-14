@@ -43,7 +43,7 @@ export default function Home() {
           <div className="flex items-center justify-between max-w-md">
             <p className="text-sm text-gray-600 dark:text-gray-300 flex gap-5">
               Frontend engineer
-              <span className="text-black dark:text-white">UX Labs.</span>
+              <Link href="https://uxlabs.mx" target="_blank"  className="text-black dark:text-white">UX Labs.</Link>
             </p>
             <p className="text-sm text-gray-600 dark:text-gray-300">2023</p>
           </div>
