@@ -10,10 +10,12 @@
   },
   "dependencies": {
     "clsx": "^2.0.0",
+    "geist": "^1.2.2",
     "next": "14.0.4",
     "react": "^18",
     "react-code-blocks": "^0.1.6",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-fast-marquee": "^1.6.4"
   },
   "devDependencies": {
     "@types/node": "^20",
