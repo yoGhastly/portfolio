@@ -59,7 +59,7 @@ export default function Home() {
         Selected projects
       </h2>
       <section className="relative">
-        <Marquee className="flex gap-3 w-full h-1/2" pauseOnHover>
+        <Marquee className="flex gap-3 w-full h-1/2" pauseOnClick>
           {projects.map((project) => (
             <Link key={project.label} href={project.url} target="_blank">
               <Project project={project} />
