@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import { ProfileSection } from "./components/profile-section";
 import { SnippetOfTheDay } from "./components/snippet-of-the-day";
-import { SelectedProjects } from "./components/selected-projects";
 import Link from "next/link";
 import { Suspense } from "react";
 import { Navbar } from "./components/layout/navbar";
 import Marquee from "react-fast-marquee";
 import { projects } from "@/constants/projects";
 import { Project } from "./components/selected-projects/project";
+import Image from "next/image";
 
 export const runtime = "edge";
 
@@ -47,25 +47,16 @@ export default function Home() {
   return (
     <main className="flex flex-col gap-5 min-h-screen">
       <Navbar />
-      <section className="flex font-sans flex-col md:flex-row justify-center py-5 px-8 gap-8 md:gap-[140px]">
+      <section className="mx-auto font-sans py-5 px-8">
         <ProfileSection />
-        <Suspense fallback={<h2>Snippet of the Day</h2>}>
-          <article className="flex items-center justify-center max-w-lg">
-            <SnippetOfTheDay />
-          </article>
-        </Suspense>
       </section>
-      <h2 className={`uppercase text-5xl md:text-8xl font-black font-mono`}>
-        Selected projects
-      </h2>
-      <section className="relative">
-        <Marquee className="flex gap-3 w-full h-1/2" pauseOnClick>
-          {projects.map((project) => (
-            <Link key={project.label} href={project.url} target="_blank">
-              <Project project={project} />
-            </Link>
-          ))}
-        </Marquee>
+
+      <section className="p-8 grid grid-cols-1 md:grid-cols-4 content-center place-items-center gap-5">
+        {projects.map((p) => (
+          <Link href={p.url} key={p.label} target="_blank">
+            <Project project={p} />
+          </Link>
+        ))}
       </section>
     </main>
   );
