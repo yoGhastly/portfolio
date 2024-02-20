@@ -25,7 +25,7 @@ export const projects = [
     label: "Ad Astra",
     description: "A mental health app for astronomy enthusiasts.",
     image: "/adastra.svg",
-    url: "https://expo.dev/@ghastly/ad-astra",
+    url: "https://app-adastra.vercel.app",
   },
   {
     index: "05",
