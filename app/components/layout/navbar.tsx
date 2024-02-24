@@ -3,7 +3,7 @@ import React from "react";
 
 export function Navbar() {
   return (
-    <nav className="w-full p-6 font-sans z-50 sticky top-0 backdrop-filter backdrop-blur-md">
+    <nav className="w-full p-6 font-sans z-50 sticky top-0 bg-transparent">
       <div className="flex gap-5 md:p-2 mx-auto">
         <Link href="/" className="font-bold">
           Diego Espinosa
