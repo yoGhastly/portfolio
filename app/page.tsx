@@ -33,8 +33,8 @@ export default function Home() {
               setTimeout(() => {
                 setIsLoading(false);
                 setProgress(100);
-              }, 3000); // Wait for 3 seconds
-              setWaitComplete(true); // Set the flag to true to avoid triggering this setTimeout again
+              }, 1000);
+              setWaitComplete(true);
             }
             return 100;
           }
@@ -43,17 +43,6 @@ export default function Home() {
       },
       ease: "power2.inOut",
     });
-
-    tl.to(".line", {
-      duration: 1.8,
-      y: 100,
-      ease: "power4.out",
-      delay: 1,
-      skewY: 7,
-      stagger: {
-        amount: 0.3,
-      },
-    });
   }, []);
 
   return isLoading ? (
@@ -61,13 +50,13 @@ export default function Home() {
       <LoaderBeforeOnload progress={progress} />
     </main>
   ) : (
-    <main className="flex flex-col gap-5 relative px-5">
+    <main className="flex justify-center items-center flex-col gap-5 relative px-5">
       <Navbar />
       <Header />
-      <section className="relative w-full flex max-w-7xl gap-10 flex-col mx-auto md:mt-10 px-8">
+      <section className="w-full flex max-w-7xl gap-10 flex-col h-screen mx-auto md:mt-10 px-8">
         <TextReveal
-          text="✨Projects"
-          className={clsx("line font-mono font-bold text-4xl md:text-7xl")}
+          text="Projects"
+          className={clsx("font-mono font-bold text-4xl md:text-7xl")}
         />
 
         <div className="flex flex-col gap-5">

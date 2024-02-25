@@ -43,7 +43,7 @@ export function MouseParallaxHeader() {
       <TextShine
         className={clsx(
           PanchangBold.className,
-          "font-bold text-3xl md:text-8xl uppercase text-center md:-mt-24",
+          "font-bold text-3xl md:text-8xl uppercase text-center",
         )}
       >
         Frontend developer
