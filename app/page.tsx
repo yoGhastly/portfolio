@@ -1,48 +1,108 @@
-import type { Metadata } from "next";
+"use client";
 import { Navbar } from "./components/layout/navbar";
-import { MouseParallaxHeader } from "./components/mouse-parallax";
+import { Header } from "./components/layout/header";
+import { Fragment, useState } from "react";
+import { LoaderBeforeOnload } from "./components/layout/before-onload";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import clsx from "clsx";
+import { TextReveal } from "./components/animated/text-reveal";
+import { projects } from "@/constants/projects";
+import Image from "next/image";
+import localFont from "next/font/local";
 
-export const runtime = "edge";
-
-export const metadata: Metadata = {
-  // metadataBase: new URL("https://diegoes.vercel.app"),
-  title: {
-    default: "Diego Espinosa",
-    template: "%s | Diego Espinosa",
-  },
-  description: "Developer, UI designer, MMA enthusiast.",
-  openGraph: {
-    title: "Diego Espinosa",
-    description: "Developer, UI designer, MMA enthusiast.",
-    url: "https://diegoes.vercel.app",
-    siteName: "Diego Espinosa",
-    locale: "en_US",
-    type: "website",
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
-  twitter: {
-    title: "Diego Espinosa",
-    card: "summary_large_image",
-  },
-};
+const PanchangBold = localFont({
+  src: "../public/Panchang-Bold.woff",
+});
 
 export default function Home() {
-  return (
-    <main className="flex flex-col gap-5 h-screen relative">
+  const [isLoading, setIsLoading] = useState(true);
+  const [progress, setProgress] = useState(0);
+  const [waitComplete, setWaitComplete] = useState(false);
+
+  useGSAP(() => {
+    const tl = gsap.timeline();
+    tl.to(".progress", {
+      value: 100,
+      duration: 25,
+      animationDelay: 25,
+      onUpdate: () => {
+        setProgress((p) => {
+          if (p >= 100) {
+            if (!waitComplete) {
+              setTimeout(() => {
+                setIsLoading(false);
+                setProgress(100);
+              }, 3000); // Wait for 3 seconds
+              setWaitComplete(true); // Set the flag to true to avoid triggering this setTimeout again
+            }
+            return 100;
+          }
+          return p + 1;
+        });
+      },
+      ease: "power2.inOut",
+    });
+
+    tl.to(".line", {
+      duration: 1.8,
+      y: 100,
+      ease: "power4.out",
+      delay: 1,
+      skewY: 7,
+      stagger: {
+        amount: 0.3,
+      },
+    });
+  }, []);
+
+  return isLoading ? (
+    <main className={`flex justify-center items-center mx-auto h-screen`}>
+      <LoaderBeforeOnload progress={progress} />
+    </main>
+  ) : (
+    <main className="flex flex-col gap-5 relative px-5">
       <Navbar />
-      <div className="absolute w-full h-screen">
-        <MouseParallaxHeader />
-      </div>
+      <Header />
+      <section className="relative w-full flex max-w-7xl gap-10 flex-col mx-auto md:mt-10 px-8">
+        <TextReveal
+          text="✨Projects"
+          className={clsx("line font-mono font-bold text-4xl md:text-7xl")}
+        />
+
+        <div className="flex flex-col gap-5">
+          {projects.slice(0, 2).map((p, idx) => (
+            <section
+              key={p.label}
+              className={clsx(
+                "flex flex-col md:flex-row w-full gap-5",
+                idx === 1 && "md:gap-9",
+              )}
+            >
+              <div className="self-center">
+                <h2
+                  className={clsx(
+                    PanchangBold.className,
+                    "text-3xl md:text-5xl font-bold",
+                  )}
+                >
+                  {p.label}
+                </h2>
+                <p className={clsx("font-sans", "max-w-sm")}>{p.description}</p>
+              </div>
+
+              <figure className="relative w-full h-48 md:w-96 md:h-60">
+                <Image
+                  src={p.image}
+                  alt={p.label}
+                  fill
+                  className="object-cover grayscale"
+                />
+              </figure>
+            </section>
+          ))}
+        </div>
+      </section>
     </main>
   );
 }

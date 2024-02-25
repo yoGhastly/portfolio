@@ -3,9 +3,38 @@ import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import "./globals.css";
 
+export const runtime = "edge";
+
 export const metadata: Metadata = {
-  title: "Diego Espinosa | Software Developer",
-  description: "Crafting experiences.",
+  metadataBase: new URL("https://diegoes.vercel.app"),
+  title: {
+    default: "Diego Espinosa",
+    template: "%s | Diego Espinosa",
+  },
+  description: "Developer, UI designer, MMA enthusiast.",
+  openGraph: {
+    title: "Diego Espinosa",
+    description: "Developer, UI designer, MMA enthusiast.",
+    url: "https://diegoes.vercel.app",
+    siteName: "Diego Espinosa",
+    locale: "en_US",
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  twitter: {
+    title: "Diego Espinosa",
+    card: "summary_large_image",
+  },
 };
 
 export default function RootLayout({
