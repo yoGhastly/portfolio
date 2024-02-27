@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import "./globals.css";
-import { ParallaxProvider } from "react-scroll-parallax";
 import { Providers } from "./providers";
 
 export const runtime = "edge";
