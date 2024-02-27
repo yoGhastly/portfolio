@@ -57,8 +57,8 @@ export const projects = [
   },
   {
     index: "08",
-    label: "Shisho Baby Clothes",
-    description: "An eccommerce site for baby clothes.",
+    label: "Campanario Eventos",
+    description: "A site for event information and booking.",
     image: "/campanario.svg",
     url: "https://shishobabyclothes.ae",
   },

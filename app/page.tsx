@@ -1,24 +1,22 @@
 "use client";
 import { Navbar } from "./components/layout/navbar";
-import { Header } from "./components/layout/header";
-import { Fragment, useState } from "react";
+import { Fragment, useRef, useState } from "react";
 import { LoaderBeforeOnload } from "./components/layout/before-onload";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import clsx from "clsx";
-import { TextReveal } from "./components/animated/text-reveal";
+import { Hero } from "./components/layout/header";
+import { Project } from "./components/project";
+import MouseContextProvider from "./context/mouse-context";
+import DotRing from "./components/animated/dot-ring";
 import { projects } from "@/constants/projects";
-import Image from "next/image";
-import localFont from "next/font/local";
-
-const PanchangBold = localFont({
-  src: "../public/Panchang-Bold.woff",
-});
+import { Parallax } from "react-scroll-parallax";
+import { useMediaQuery } from "@/hooks/useMediaQuery";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
   const [progress, setProgress] = useState(0);
   const [waitComplete, setWaitComplete] = useState(false);
+  const isSm = useMediaQuery(480);
 
   useGSAP(() => {
     const tl = gsap.timeline();
@@ -33,7 +31,7 @@ export default function Home() {
               setTimeout(() => {
                 setIsLoading(false);
                 setProgress(100);
-              }, 1000);
+              }, 500);
               setWaitComplete(true);
             }
             return 100;
@@ -50,48 +48,76 @@ export default function Home() {
       <LoaderBeforeOnload progress={progress} />
     </main>
   ) : (
-    <main className="flex justify-center items-center flex-col gap-5 relative px-5">
-      <Navbar />
-      <Header />
-      <section className="w-full flex max-w-7xl gap-10 flex-col h-screen mx-auto md:mt-10 px-8">
-        <TextReveal
-          text="Projects"
-          className={clsx("font-mono font-bold text-4xl md:text-7xl")}
-        />
+    <MouseContextProvider>
+      <Fragment>
+        <Navbar />
+        <main className="flex h-full flex-col md:gap-12 py-0 px-6 md:p-6">
+          <DotRing />
+          <Hero />
+          <Parallax speed={isSm ? 15 : 30}>
+            <section className="flex flex-col gap-10 justify-center">
+              <article className="flex flex-col md:flex-row justify-between w-full max-w-7xl mx-auto">
+                <p className="font-sans font-bold text-xl flex gap-10">
+                  00 <span>about</span>
+                </p>
+                <p className="flex flex-col gap-5 font-sans uppercase text-[#9d9d9d] max-w-3xl text-lg md:text-4xl leading-normal dark:text-[#d4d4d4]">
+                  Passionate about frontend web technologies. I love working at
+                  the intersection of creativity and user friendly interfaces.
+                  <span>
+                    When I&apos;m not building or exploring new web experiences,
+                    I&apos;m probably training MMA.
+                  </span>
+                </p>
+              </article>
 
-        <div className="flex flex-col gap-5">
-          {projects.slice(0, 2).map((p, idx) => (
-            <section
-              key={p.label}
-              className={clsx(
-                "flex flex-col md:flex-row w-full gap-5",
-                idx === 1 && "md:gap-9",
-              )}
-            >
-              <div className="self-center">
-                <h2
-                  className={clsx(
-                    PanchangBold.className,
-                    "text-3xl md:text-5xl font-bold",
-                  )}
-                >
-                  {p.label}
-                </h2>
-                <p className={clsx("font-sans", "max-w-sm")}>{p.description}</p>
-              </div>
-
-              <figure className="relative w-full h-48 md:w-96 md:h-60">
-                <Image
-                  src={p.image}
-                  alt={p.label}
-                  fill
-                  className="object-cover grayscale"
-                />
-              </figure>
+              <section className="flex gap-8 mx-auto justify-center max-w-2xl w-full md:mt-24">
+                <p className="font-sans text-[#9d9d9d] text-xl dark:text-[#9d9d9d] w-[13rem]">
+                  A blend of UI and product engineering.
+                </p>
+                <p className="flex flex-col gap-5 font-sans text-[#9d9d9d] text-xl dark:text-[#d4d4d4] max-w-md">
+                  With a background in design, I work closely with design
+                  focused teams to build websites and microsites for companies
+                  and individuals.
+                  <span>
+                    I have experience working and collaborating on product teams
+                    and leading engineering efforts. With my experience in UI
+                    and product engineering, I solve product problems and build
+                    appealing usable web experiences.
+                  </span>
+                </p>
+              </section>
             </section>
-          ))}
-        </div>
-      </section>
-    </main>
+          </Parallax>
+
+          <Parallax speed={isSm ? 15 : 30}>
+            <section className="flex flex-col gap-10 justify-center mt-24 font-sans">
+              <article className="flex flex-col md:flex-row justify-between text-xl w-full max-w-7xl mx-auto">
+                <p className="font-bold">
+                  01 <span>projects</span>
+                </p>
+                <p className="w-[15rem]">
+                  A collection of recent projects I&apos;ve worked on
+                </p>
+                <p className="w-[12rem]">Frontend engineering</p>
+              </article>
+            </section>
+          </Parallax>
+
+          <section className="flex flex-col justify-center w-full p-5 mx-auto gap-10 md:mt-24 font-sans">
+            {projects.map((p) => (
+              <Project
+                key={p.label}
+                project={{
+                  title: p.label,
+                  thumbnail: p.image,
+                  url: p.url,
+                  description: p.description,
+                }}
+              />
+            ))}
+          </section>
+        </main>
+      </Fragment>
+    </MouseContextProvider>
   );
 }

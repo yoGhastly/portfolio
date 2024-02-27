@@ -1,12 +1,13 @@
+import { CubeTransparentIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import React from "react";
 
 export function Navbar() {
   return (
     <nav className="w-full p-6 font-sans z-50 sticky top-0 backdrop-filter backdrop-blur-md">
-      <div className="flex gap-5 md:p-2 mx-auto">
+      <div className="flex gap-5 items-center md:p-2 mx-auto">
         <Link href="/" className="font-bold">
-          Diego Espinosa
+          <CubeTransparentIcon className="h-8" />
         </Link>
         <Link
           href={`https://github.com/yoGhastly`}

@@ -9,8 +9,13 @@ const PanchangBold = localFont({
 
 export function LoaderBeforeOnload({ progress }: { progress: number }) {
   return (
-    <div className="flex justify-center items-center mx-auto">
-      <h1 className={clsx(PanchangBold.className, "text-6xl font-bold")}>
+    <div className="p-5">
+      <h1
+        className={clsx(
+          PanchangBold.className,
+          "text-3xl md:text-6xl font-bold",
+        )}
+      >
         Loading{" "}
         <span className="tabular-nums progress">{Math.round(progress)}</span>%
       </h1>
