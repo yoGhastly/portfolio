@@ -18,7 +18,7 @@ const PanchangBold = localFont({
 export function Project({ project }: { project: Project }) {
   return (
     <section className="w-full h-full flex flex-col md:flex-row gap-10">
-      <div className="flex flex-col w-full gap-3 md:gap-24 z-50">
+      <div className="flex flex-col w-full gap-3 md:gap-24">
         <Label
           text={project.title}
           url={project.url}

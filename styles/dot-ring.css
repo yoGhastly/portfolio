@@ -1,3 +1,13 @@
+:root {
+  --border-color: #000;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --border-color: #f2f2f2;
+  }
+}
+
 .ringCursor {
   position: fixed;
   top: 0;
@@ -29,7 +39,7 @@
 }
 
 .ringCursor.hovered {
-  border: 2px solid #f4f4f4;
+  border: 2px solid var(--border-color);
   width: 100px;
   height: 100px;
 }
