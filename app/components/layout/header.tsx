@@ -29,29 +29,28 @@ export function Hero({ onImageComplete }: { onImageComplete: () => void }) {
     <header className="flex flex-col gap-3 md:gap-8 mx-auto">
       <article className="flex flex-col md:flex-row w-full h-auto items-end gap-8 mx-auto md:max-w-7xl justify-between">
         <section className="w-full h-full flex gap-10 flex-col justify-between">
-          <TextReveal
+          <p
             className={clsx(
               PanchangBold.className,
               "text-[2.5rem] md:text-7xl font-bold",
             )}
-            text="Software Developer"
-          />
+          >
+            Software Developer
+          </p>
 
-          <Parallax speed={10}>
-            <div
-              className={clsx(
-                "w-full h-80 bg-transparent relative self-end fadeIn",
-              )}
-            >
-              <Image
-                src="/profile.png"
-                alt="Diego Espinosa"
-                fill
-                className="object-cover grayscale"
-                onLoadingComplete={onImageComplete}
-              />
-            </div>
-          </Parallax>
+          <div
+            className={clsx(
+              "w-full h-80 bg-transparent relative self-end fadeIn",
+            )}
+          >
+            <Image
+              src="/profile.png"
+              alt="Diego Espinosa"
+              fill
+              className="object-cover grayscale"
+              onLoadingComplete={onImageComplete}
+            />
+          </div>
         </section>
         <section className="w-full h-full flex flex-wrap-reverse items-end justify-end">
           <p className="fadeIn font-sans self-start text-lg md:text-xl max-w-md text-[#020202] dark:text-[#d4d4d4]">
