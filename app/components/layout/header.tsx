@@ -3,16 +3,14 @@ import clsx from "clsx";
 import localFont from "next/font/local";
 import Image from "next/image";
 import React from "react";
-import { TextReveal } from "../animated/text-reveal";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
-import { Parallax } from "react-scroll-parallax";
 
 const PanchangBold = localFont({
   src: "../../../public/Panchang-Bold.woff",
 });
 
-export function Hero({ onImageComplete }: { onImageComplete: () => void }) {
+export function Hero() {
   useGSAP(() => {
     gsap.from(".fadeIn", {
       opacity: 0,
@@ -48,7 +46,6 @@ export function Hero({ onImageComplete }: { onImageComplete: () => void }) {
               alt="Diego Espinosa"
               fill
               className="object-cover grayscale"
-              onLoadingComplete={onImageComplete}
             />
           </div>
         </section>

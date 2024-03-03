@@ -16,10 +16,6 @@ export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
   const [progress, setProgress] = useState(0);
 
-  const onImageComplete = () => {
-    setIsLoading(false);
-  };
-
   useGSAP(() => {
     const tl = gsap.timeline();
     tl.to(".progress", {
@@ -29,10 +25,7 @@ export default function Home() {
       onUpdate: () => {
         setProgress((p) => {
           if (p >= 100) {
-            if (isLoading) {
-              setIsLoading(false);
-              setProgress(100);
-            }
+            setIsLoading(false);
             return 100;
           }
           return p + 1;
@@ -43,7 +36,9 @@ export default function Home() {
   }, []);
 
   return isLoading ? (
-    <main className={`flex justify-center items-center mx-auto h-screen`}>
+    <main
+      className={`fadeOut flex justify-center items-center mx-auto h-screen`}
+    >
       <LoaderBeforeOnload progress={progress} />
     </main>
   ) : (
@@ -51,7 +46,7 @@ export default function Home() {
       <Fragment>
         <Navbar />
         <main className="flex h-full flex-col md:gap-12 py-0 px-6 md:p-6">
-          <Hero onImageComplete={onImageComplete} />
+          <Hero />
           <About />
           <ProjectSection />
         </main>

@@ -22,8 +22,9 @@ export const TextReveal = ({
     >
       {text.split("").map((char, charIndex) => (
         <span
+          lang="en"
           className={clsx({
-            "animate-text-reveal inline-block [animation-fill-mode:backwards]":
+            "animate-text-reveal inline-block hyphens-auto [animation-fill-mode:backwards]":
               isVisible,
           })}
           key={`${char}-${charIndex}`}

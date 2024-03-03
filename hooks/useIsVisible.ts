@@ -1,12 +1,16 @@
-"use client";
-import { useEffect, useState, RefObject } from "react";
+import { useState, useEffect } from "react";
 
-export function useIsVisible(ref: RefObject<Element>) {
-  const [isIntersecting, setIntersecting] = useState(false);
+export function useIsVisible(ref: React.RefObject<HTMLElement>) {
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(([entry]) => {
-      setIntersecting(entry.isIntersecting);
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect(); // Disconnect the observer once the element is visible
+        }
+      });
     });
 
     if (ref.current) {
@@ -14,9 +18,11 @@ export function useIsVisible(ref: RefObject<Element>) {
     }
 
     return () => {
-      observer.disconnect();
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
     };
   }, [ref]);
 
-  return isIntersecting;
+  return isVisible;
 }
