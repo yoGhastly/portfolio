@@ -3703,6 +3703,11 @@ object.values@^1.1.6, object.values@^1.1.7:
     define-properties "^1.2.0"
     es-abstract "^1.22.1"
 
+ogl@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/ogl/-/ogl-1.0.5.tgz#22b70c7caecf111b8a50ec0c414688ab81f35c61"
+  integrity sha512-3hJKUgrFG3GtEZA4iL25Qe9jTodmXv1K0xXZ3XOpqEeXSi/DlzkJsb+um7ayafZ/BYCfKHl37qXiYKmcBqfYHQ==
+
 once@^1.3.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/once/-/once-1.4.0.tgz#583b1aa775961d4b113ac17d9c50baef9dd76bd1"
@@ -4478,10 +4483,23 @@ use-sidecar@^1.1.2:
     detect-node-es "^1.1.0"
     tslib "^2.0.0"
 
+use-sync-external-store@1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/use-sync-external-store/-/use-sync-external-store-1.2.0.tgz#7dbefd6ef3fe4e767a0cf5d7287aacfb5846928a"
+  integrity sha512-eEgnFxGQ1Ife9bzYs6VLi8/4X6CObHMw9Qr9tPY43iKwsPw8xE8+EFsf/2cFZ5S3esXgpWgtSCtLNS41F+sKPA==
+
 util-deprecate@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/util-deprecate/-/util-deprecate-1.0.2.tgz#450d4dc9fa70de732762fbd2d4a28981419a0ccf"
   integrity sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==
+
+uvcanvas@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/uvcanvas/-/uvcanvas-0.1.0.tgz#b8291df56cb57bf1ac3d3db84365a472bbea4b12"
+  integrity sha512-21XN+b0/ijOIejXoGBgrkeWoWEfmtUcl0EUHb4cZL4dK75UfNl678wkrp3bS5FA2H06hfc92CSwHCpvJ3umYLw==
+  dependencies:
+    ogl "^1.0.5"
+    zustand "^4.5.2"
 
 watchpack@2.4.0:
   version "2.4.0"
@@ -4567,3 +4585,10 @@ yocto-queue@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/yocto-queue/-/yocto-queue-0.1.0.tgz#0294eb3dee05028d31ee1a5fa2c556a6aaf10a1b"
   integrity sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==
+
+zustand@^4.5.2:
+  version "4.5.2"
+  resolved "https://registry.yarnpkg.com/zustand/-/zustand-4.5.2.tgz#fddbe7cac1e71d45413b3682cdb47b48034c3848"
+  integrity sha512-2cN1tPkDVkwCy5ickKrI7vijSjPksFRfqS6237NzT0vqSsztTNnQdHw9mmN7uBdk3gceVXU0a+21jFzFzAc9+g==
+  dependencies:
+    use-sync-external-store "1.2.0"

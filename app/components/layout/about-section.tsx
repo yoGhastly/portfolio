@@ -1,24 +1,18 @@
-import { useMediaQuery } from "@/hooks/useMediaQuery";
 import React from "react";
 import { Parallax } from "react-scroll-parallax";
-import { TextReveal } from "../animated/text-reveal";
 
 export function About() {
-  const isSm = useMediaQuery(480);
   return (
-    <section className="flex flex-col gap-10 justify-center">
+    <section className="flex flex-col gap-10 justify-center mt-5">
       <article className="flex flex-col md:flex-row justify-between w-full max-w-7xl mx-auto">
         <p className="font-sans font-bold text-xl flex gap-10">
           00 <span>about</span>
         </p>
-        <p
-          lang="en"
-          className="flex flex-col gap-5 font-sans uppercase text-[#020202] max-w-3xl text-xl md:text-4xl leading-normal text-justify dark:text-[#d4d4d4]"
-        >
-          <TextReveal
-            text="Passionate about frontend web tech&shy;nologies. I love working at
-                  the intersection of creativity and user friendly interfaces."
-          />
+        <p className="flex flex-col gap-5 font-sans uppercase text-[#020202] max-w-3xl text-xl md:text-4xl leading-normal dark:text-[#d4d4d4]">
+          <p>
+            Passionate about frontend web techynologies. I love working at the
+            intersection of creativity and user friendly interfaces.
+          </p>
           <span>
             When I&apos;m not building or exploring new web experiences,
             I&apos;m probably training MMA.

@@ -1,10 +1,10 @@
 import { ArrowDownIcon } from "@heroicons/react/24/outline";
 import clsx from "clsx";
 import localFont from "next/font/local";
-import Image from "next/image";
 import React from "react";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
+import { Velustro } from "uvcanvas";
 
 const PanchangBold = localFont({
   src: "../../../public/Panchang-Bold.woff",
@@ -18,7 +18,7 @@ export function Hero() {
     });
     gsap.to(".fadeIn", {
       opacity: 1,
-      duration: 2,
+      duration: 1.5,
       y: 0,
     });
   });
@@ -41,12 +41,7 @@ export function Hero() {
               "w-full h-80 bg-transparent relative self-end fadeIn",
             )}
           >
-            <Image
-              src="/profile.png"
-              alt="Diego Espinosa"
-              fill
-              className="object-cover grayscale"
-            />
+            <Velustro />
           </div>
         </section>
         <section className="w-full h-full flex flex-wrap-reverse items-end justify-end">

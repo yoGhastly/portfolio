@@ -23,7 +23,8 @@
     "react-dom": "^18",
     "react-fast-marquee": "^1.6.4",
     "react-parallax-mouse": "^2.1.0",
-    "react-scroll-parallax": "^3.4.5"
+    "react-scroll-parallax": "^3.4.5",
+    "uvcanvas": "^0.1.0"
   },
   "devDependencies": {
     "@types/node": "^20",
