@@ -1,8 +1,9 @@
-import React from "react";
+"use client";
+import React, { Suspense, lazy } from "react";
 import clsx from "clsx";
 import Image from "next/image";
 import Link from "next/link";
-import localFont from "next/font/local";
+import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
 
 interface Project {
   title: string;
@@ -11,47 +12,49 @@ interface Project {
   description: string;
 }
 
-const PanchandBold = localFont({
-  src: "../../../public/Panchang-Bold.woff",
-});
+const OpulentoLazy = lazy(() =>
+  import("uvcanvas").then((module) => ({ default: module.Opulento })),
+);
 
 export function Project({ project }: { project: Project }) {
   return (
     <section className="w-full h-full flex justify-center">
-      <Link
-        href={project.url}
-        className="w-full h-full max-w-6xl flex justify-center relative p-5"
-      >
-        <div
-          className={clsx(
-            "w-full max-w-5xl h-[25rem] md:h-[30rem] bg-transparent relative",
-          )}
-        >
+      <article className="w-full h-full max-w-7xl relative grid grid-cols-2 p-5">
+        <section className="flex flex-col border h-full border-[#4d4d4d]">
+          <div className="w-full h-1/2 flex items-center justify-center border border-[#4D4D4D]">
+            <p className={clsx("font-mono font-bold text-8xl")}>
+              {project.title}
+            </p>
+          </div>
+          <div className="w-full h-full flex justify-evenly items-center">
+            <p>{project.description}</p>
+            <Link
+              href={project.url}
+              className="flex w-16 h-16 justify-center items-center bg-white rounded-full"
+            >
+              <ArrowUpRightIcon className="text-black h-10" />
+            </Link>
+          </div>
+          <div className="flex">
+            <div className="w-full border border-[#4d4d4d] flex justify-center items-center">
+              <p>{project.url}</p>
+            </div>
+            <div>
+              <Suspense fallback={<div>Loading...</div>}>
+                <OpulentoLazy />
+              </Suspense>
+            </div>
+          </div>
+        </section>
+        <figure className="aspect-square relative w-full max-w-5xl h-full border border-[#4d4d4d]">
           <Image
             src={project.thumbnail}
-            alt={project.title}
             fill
-            className="object-cover rounded-sm md:rounded-3xl"
+            alt={project.title}
+            className="object-cover"
           />
-        </div>
-        <p
-          className={clsx(
-            "absolute hidden md:block bottom-28 font-mono font-bold text-2xl left-0 uppercase",
-            "drop-shadow-xl",
-          )}
-        >
-          {project.url}
-        </p>
-
-        <p
-          className={clsx(
-            "absolute top-0 md:top-28 right-5 font-mono w-60 md:text-justify font-bold text-sm md:text-xl md:right-0 uppercase",
-            "drop-shadow-xl text-center md:text-start",
-          )}
-        >
-          {project.description}
-        </p>
-      </Link>
+        </figure>
+      </article>
     </section>
   );
 }

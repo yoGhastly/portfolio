@@ -4493,10 +4493,10 @@ util-deprecate@^1.0.2:
   resolved "https://registry.yarnpkg.com/util-deprecate/-/util-deprecate-1.0.2.tgz#450d4dc9fa70de732762fbd2d4a28981419a0ccf"
   integrity sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==
 
-uvcanvas@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/uvcanvas/-/uvcanvas-0.1.0.tgz#b8291df56cb57bf1ac3d3db84365a472bbea4b12"
-  integrity sha512-21XN+b0/ijOIejXoGBgrkeWoWEfmtUcl0EUHb4cZL4dK75UfNl678wkrp3bS5FA2H06hfc92CSwHCpvJ3umYLw==
+uvcanvas@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/uvcanvas/-/uvcanvas-0.2.0.tgz#9fc6a5613366b895d9a5a307bc16548c57785966"
+  integrity sha512-u/k7V/i931KOmSRfOwtdRJZ2XpJZj8wABXeXS4cUF8I4ZlL3M2x2AR1WTY4f8+cKUUOdCjm6knBsKfo3RUKNbQ==
   dependencies:
     ogl "^1.0.5"
     zustand "^4.5.2"
