@@ -4,7 +4,7 @@ import localFont from "next/font/local";
 import React from "react";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
-import Image from "next/image";
+import { Velustro } from "uvcanvas";
 
 const PanchangBold = localFont({
   src: "../../../public/Panchang-Bold.woff",
@@ -36,17 +36,8 @@ export function Hero() {
             Software Developer
           </p>
 
-          <div
-            className={clsx(
-              "w-full h-80 bg-transparent relative self-end fadeIn",
-            )}
-          >
-            <Image
-              src="/profile.png"
-              fill
-              alt="Diego Espinose"
-              className="object-cover"
-            />
+          <div className={clsx("w-full h-80 bg-transparent relative self-end")}>
+            <Velustro />
           </div>
         </section>
         <section className="w-full h-full flex flex-wrap-reverse items-end justify-end">

@@ -17,22 +17,23 @@ export default function Home() {
   const [progress, setProgress] = useState(0);
 
   useGSAP(() => {
-    const tl = gsap.timeline();
+    const tl = gsap.timeline({ onUpdate: updateProgress });
     tl.to(".progress", {
       value: 100,
-      duration: 25,
-      animationDelay: 25,
-      onUpdate: () => {
-        setProgress((p) => {
-          if (p >= 100) {
-            setIsLoading(false);
-            return 100;
-          }
-          return p + 1;
-        });
-      },
+      duration: 1,
       ease: "power2.inOut",
     });
+
+    function updateProgress() {
+      const newProgress = Math.min(
+        Math.floor((tl.progress() * 100) / 10) * 10,
+        100,
+      );
+      setProgress(newProgress);
+      if (newProgress >= 100) {
+        setIsLoading(false);
+      }
+    }
   }, []);
 
   return isLoading ? (

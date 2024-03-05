@@ -19,27 +19,32 @@ const OpulentoLazy = lazy(() =>
 export function Project({ project }: { project: Project }) {
   return (
     <section className="w-full h-full flex justify-center">
-      <article className="w-full h-full max-w-7xl relative grid grid-cols-2 p-5">
+      <article className="w-full h-full max-w-7xl relative grid grid-cols-1 md:grid-cols-2 p-5">
         <section className="flex flex-col border h-full border-[#4d4d4d]">
           <div className="w-full h-1/2 flex items-center justify-center border border-[#4D4D4D]">
-            <p className={clsx("font-mono font-bold text-8xl")}>
+            <p
+              className={clsx(
+                "font-mono font-bold text-4xl md:text-8xl uppercase",
+              )}
+            >
               {project.title}
             </p>
           </div>
-          <div className="w-full h-full flex justify-evenly items-center">
+          <div className="w-full h-full flex justify-evenly items-center p-1.5 md:p-0">
             <p>{project.description}</p>
             <Link
               href={project.url}
-              className="flex w-16 h-16 justify-center items-center bg-white rounded-full"
+              target="_blank"
+              className="flex w-11 h-8 md:w-16 md:h-16 justify-center items-center bg-black dark:bg-white rounded-full"
             >
-              <ArrowUpRightIcon className="text-black h-10" />
+              <ArrowUpRightIcon className="text-white dark:text-black h-4 md:h-10" />
             </Link>
           </div>
-          <div className="flex">
+          <div className="flex flex-col md:flex-row">
             <div className="w-full border border-[#4d4d4d] flex justify-center items-center">
               <p>{project.url}</p>
             </div>
-            <div>
+            <div className="hidden md:block w-full h-full">
               <Suspense fallback={<div>Loading...</div>}>
                 <OpulentoLazy />
               </Suspense>

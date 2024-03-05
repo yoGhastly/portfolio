@@ -17,7 +17,7 @@ export function ProjectSection() {
         </article>
       </section>
 
-      <section className="flex flex-col justify-center w-full p-5 mx-auto gap-10 mt-8 md:mt-24 font-sans">
+      <section className="flex flex-col justify-center w-full md:p-5 mx-auto gap-10 mt-8 md:mt-24 font-sans">
         {projects.map((p) => (
           <Project
             key={p.label}
