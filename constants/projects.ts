@@ -6,6 +6,12 @@ export const projects = [
     url: "https://www.xervsware.com",
   },
   {
+    label: "Zenith.",
+    description: "Choose Wisely, Build Efficiently: Zenith's Intelligent Tool Recommendations.",
+    url: "https://aizenith.vercel.app",
+    image: "",
+  },
+  {
     label: "Monarca",
     description: "A landing page for a package delivery company.",
     image: "/monarca.svg",
