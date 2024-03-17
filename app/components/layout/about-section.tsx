@@ -8,16 +8,16 @@ export function About() {
         <p className="font-sans font-bold text-xl flex gap-10">
           00 <span>about</span>
         </p>
-        <p className="flex flex-col gap-5 font-sans uppercase text-[#020202] max-w-3xl text-xl md:text-4xl leading-normal dark:text-[#d4d4d4]">
+        <div className="flex flex-col gap-5 font-sans uppercase text-[#020202] max-w-3xl text-xl md:text-4xl leading-normal dark:text-[#d4d4d4]">
           <p>
-            Passionate about frontend web techynologies. I love working at the
+            Passionate about frontend web technologies. I love working at the
             intersection of creativity and user friendly interfaces.
           </p>
           <span>
             When I&apos;m not building or exploring new web experiences,
             I&apos;m probably training MMA.
           </span>
-        </p>
+        </div>
       </article>
 
       <Parallax speed={15}>

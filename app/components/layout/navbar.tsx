@@ -21,6 +21,12 @@ export function Navbar() {
         >
           LinkedIn
         </Link>
+        <Link
+          href="https://dribbble.com/diego03825/shots"
+          className="text-neutral-500 underline-offset-4 hover:text-black hover:underline dark:text-neutral-400 dark:hover:text-neutral-300"
+        >
+          Dribbble
+        </Link>
       </div>
     </nav>
   );

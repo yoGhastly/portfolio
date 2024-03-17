@@ -7,7 +7,8 @@ export const projects = [
   },
   {
     label: "Zenith.",
-    description: "Choose Wisely, Build Efficiently: Zenith's Intelligent Tool Recommendations.",
+    description:
+      "Choose Wisely, Build Efficiently: Zenith's Intelligent Tool Recommendations.",
     url: "https://aizenith.vercel.app",
     image: "",
   },
@@ -15,7 +16,7 @@ export const projects = [
     label: "Monarca",
     description: "A landing page for a package delivery company.",
     image: "/monarca.svg",
-    url: "https://diegoes.vercel.app/projects",
+    url: `https://dribbble.com/shots/23841379-Monarca-Landing-Page`,
   },
   {
     label: "Ad Astra",
