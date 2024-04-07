@@ -46,8 +46,8 @@ export function Hero() {
         at ?????? based in{" "}
         <span className="text-black">
           Monterrey,
-          <section className="relative inline-block mx-2">
-            <div className="w-fit h-8 md:h-10 relative select-none rounded-md">
+          <section className="hidden relative md:inline-block mx-2">
+            <div className="md:w-full h-8 md:h-10 relative select-none rounded-md">
               <MapPinIcon className="w-full h-full" />
             </div>
           </section>
