@@ -1,35 +1,20 @@
+"use client";
 import { projects } from "@/constants/projects";
-import React, { Fragment } from "react";
+import React from "react";
 import { Project } from "../project";
+import { Parallax } from "react-scroll-parallax";
 
 export function ProjectSection() {
   return (
-    <Fragment>
-      <section className="flex flex-col gap-10 justify-center mt-8 md:mt-24 font-sans">
-        <article className="flex flex-col md:flex-row justify-between text-xl w-full max-w-7xl mx-auto">
-          <p className="font-bold">
-            01 <span>projects</span>
-          </p>
-          <p className="w-[15rem]">
-            A collection of recent projects I&apos;ve worked on
-          </p>
-          <p className="w-[12rem]">Frontend engineering</p>
-        </article>
+    <Parallax speed={5}>
+      <section className="flex flex-col gap-10 max-w-sm mx-auto justify-center mt-5 font-sans px-8">
+        <p className="">A collection of recent projects I&apos;ve worked on</p>
+        <section className="flex flex-grow flex-wrap gap-8">
+          {projects.map((p) => (
+            <Project key={p.title} project={p} />
+          ))}
+        </section>
       </section>
-
-      <section className="flex flex-col justify-center w-full md:p-5 mx-auto gap-10 mt-8 md:mt-24 font-sans">
-        {projects.map((p) => (
-          <Project
-            key={p.label}
-            project={{
-              title: p.label,
-              thumbnail: p.image,
-              url: p.url,
-              description: p.description,
-            }}
-          />
-        ))}
-      </section>
-    </Fragment>
+    </Parallax>
   );
 }

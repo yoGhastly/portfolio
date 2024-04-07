@@ -5,7 +5,7 @@ import React from "react";
 export function Navbar() {
   return (
     <nav className="w-full p-6 font-sans z-50 sticky top-0 backdrop-filter backdrop-blur-sm">
-      <div className="flex gap-5 items-center md:p-2 mx-auto">
+      <div className="flex gap-5 items-center md:p-2 mx-auto max-w-sm">
         <Link href="/" className="font-bold">
           <CubeTransparentIcon className="h-8" />
         </Link>

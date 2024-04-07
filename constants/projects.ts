@@ -1,57 +1,48 @@
 export const projects = [
   {
-    label: "Xervsware",
+    title: "Xervsware",
     description: "A team that loves to build tech solutions.",
-    image: "/xervsware.svg",
     url: "https://www.xervsware.com",
   },
   {
-    label: "Zenith.",
+    title: "Zenith.",
     description:
       "Choose Wisely, Build Efficiently: Zenith's Intelligent Tool Recommendations.",
     url: "https://aizenith.vercel.app",
-    image: "",
   },
   {
-    label: "Monarca",
+    title: "Monarca",
     description: "A landing page for a package delivery company.",
-    image: "/monarca.svg",
     url: `https://dribbble.com/shots/23841379-Monarca-Landing-Page`,
   },
   {
-    label: "Ad Astra",
+    title: "Ad Astra",
     description: "A mental health app for astronomy enthusiasts.",
-    image: "/adastra.svg",
     url: "https://app-adastra.vercel.app",
   },
   {
-    label: "GEITS",
-    description: "A platform for engineering students.",
-    image: "/geits.svg",
+    title: "GEITS",
+    description: "A platform for software engineering students.",
     url: "https://geits.tech",
   },
   {
-    label: "Touch Room",
+    title: "Touch Room",
     description: "An interactive game for special moments.",
-    image: "/touch.svg",
     url: "https://touch-room.vercel.app",
   },
   {
-    label: "GEA",
-    description: "A platform for software engineering students.",
-    image: "/gea.svg",
+    title: "GEA",
+    description: "A platform for engineering students.",
     url: "https://gea-platform.vercel.app",
   },
   {
-    label: "Shisho Baby Clothes",
+    title: "Shisho Baby Clothes",
     description: "An eccommerce site for baby clothes.",
-    image: "/shisho.png",
     url: "https://shishobabyclothes.ae",
   },
   {
-    label: "Campanario Eventos",
+    title: "Campanario Eventos",
     description: "A site for event information and booking.",
-    image: "/campanario.svg",
     url: "https://shishobabyclothes.ae",
   },
 ];

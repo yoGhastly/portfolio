@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <Fragment>
       <Navbar />
-      <main className="flex h-full flex-col md:gap-12 py-0 px-6 md:p-6">
+      <main className="w-full max-w-6xl mx-auto flex flex-col gap-10 justify-center items-center">
         <Hero />
         <About />
         <ProjectSection />
