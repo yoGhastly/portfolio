@@ -27,7 +27,7 @@ export function Hero() {
       <div
         className={clsx(
           InstrumentSerif.className,
-          "text-4xl md:text-5xl text-gray-500 self-center",
+          "text-4xl md:text-5xl text-gray-500 self-center w-full",
           "flex flex-wrap gap-x-3",
           "mt-10 md:max-w-sm items-center leading-tight",
         )}
@@ -47,7 +47,7 @@ export function Hero() {
         <span className="text-black">
           Monterrey,
           <section className="relative inline-block mx-2">
-            <div className="w-full h-8 md:h-10 relative select-none rounded-md">
+            <div className="w-fit h-8 md:h-10 relative select-none rounded-md">
               <MapPinIcon className="w-full h-full" />
             </div>
           </section>
