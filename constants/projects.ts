@@ -5,6 +5,11 @@ export const projects = [
     url: "https://www.xervsware.com",
   },
   {
+    title: "Shisho Baby Clothes",
+    description: "An eccommerce site for baby clothes.",
+    url: "https://shishobabyclothes.ae",
+  },
+  {
     title: "Zenith.",
     description:
       "Choose Wisely, Build Efficiently: Zenith's Intelligent Tool Recommendations.",
@@ -16,14 +21,9 @@ export const projects = [
     url: `https://dribbble.com/shots/23841379-Monarca-Landing-Page`,
   },
   {
-    title: "Ad Astra",
-    description: "A mental health app for astronomy enthusiasts.",
-    url: "https://app-adastra.vercel.app",
-  },
-  {
-    title: "GEITS",
-    description: "A platform for software engineering students.",
-    url: "https://geits.tech",
+    title: "Car Service Design",
+    description: "A landing page for a car service in Dubai.",
+    url: `https://dribbble.com/shots/23995060-Car-Service-Landing-Page?utm_source=Clipboard_Shot&utm_campaign=diego03825&utm_content=Car%20Service%20Landing%20Page&utm_medium=Social_Share&utm_source=Clipboard_Shot&utm_campaign=diego03825&utm_content=Car%20Service%20Landing%20Page&utm_medium=Social_Share`,
   },
   {
     title: "Touch Room",
@@ -36,9 +36,14 @@ export const projects = [
     url: "https://gea-platform.vercel.app",
   },
   {
-    title: "Shisho Baby Clothes",
-    description: "An eccommerce site for baby clothes.",
-    url: "https://shishobabyclothes.ae",
+    title: "Ad Astra",
+    description: "A mental health app for astronomy enthusiasts.",
+    url: "https://app-adastra.vercel.app",
+  },
+  {
+    title: "GEITS",
+    description: "A platform for software engineering students.",
+    url: "https://geits.tech",
   },
   {
     title: "Campanario Eventos",
