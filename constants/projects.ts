@@ -31,6 +31,11 @@ export const projects = [
     url: "https://touch-room.vercel.app",
   },
   {
+    title: "Software House Company Design",
+    description: "A landing page for a software house company in Dubai.",
+    url: `https://dribbble.com/shots/24020899-Software-House-Company-Landing-Page?utm_source=Clipboard_Shot&utm_campaign=diego03825&utm_content=Software%20House%20Company%20Landing%20Page&utm_medium=Social_Share&utm_source=Clipboard_Shot&utm_campaign=diego03825&utm_content=Software%20House%20Company%20Landing%20Page&utm_medium=Social_Share`,
+  },
+  {
     title: "GEA",
     description: "A platform for engineering students.",
     url: "https://gea-platform.vercel.app",
