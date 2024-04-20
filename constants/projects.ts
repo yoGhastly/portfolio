@@ -21,6 +21,11 @@ export const projects = [
     url: `https://dribbble.com/shots/23841379-Monarca-Landing-Page`,
   },
   {
+    title: "Cosmetics Ecommerce Design",
+    description: "A landing page for a beauty products company",
+    url: `https://dribbble.com/shots/24036758-Beauty-Cosmetics-Client?utm_source=Clipboard_Shot&utm_campaign=diego03825&utm_content=Beauty%20Cosmetics%20Client&utm_medium=Social_Share&utm_source=Clipboard_Shot&utm_campaign=diego03825&utm_content=Beauty%20Cosmetics%20Client&utm_medium=Social_Share`,
+  },
+  {
     title: "Car Service Design",
     description: "A landing page for a car service in Dubai.",
     url: `https://dribbble.com/shots/23995060-Car-Service-Landing-Page?utm_source=Clipboard_Shot&utm_campaign=diego03825&utm_content=Car%20Service%20Landing%20Page&utm_medium=Social_Share&utm_source=Clipboard_Shot&utm_campaign=diego03825&utm_content=Car%20Service%20Landing%20Page&utm_medium=Social_Share`,
