@@ -23,6 +23,7 @@ export function Hero() {
     document.body.appendChild(link);
     link.click();
   };
+
   return (
     <header className="flex flex-col justify-center gap-3 md:gap-8 mx-auto px-8">
       <div
@@ -30,7 +31,7 @@ export function Hero() {
           InstrumentSerif.className,
           "text-4xl md:text-5xl text-gray-500 self-center w-full",
           "flex flex-wrap gap-x-3",
-          "mt-10 md:max-w-sm items-center leading-snug",
+          "mt-10 md:max-w-sm items-center leading-snug"
         )}
       >
         Hey,
@@ -41,12 +42,10 @@ export function Hero() {
           </div>
         </section>{" "}
         <span className="text-black">Diego</span>
-        <span className={clsx(styles.heroGradient)}>
-          a Frontend Developer
-        </span>{" "}
+        <span className={clsx(styles.heroGradient)}>a Frontend Developer</span>{" "}
         at
         <section className="relative inline-block">
-          <div className="w-44 h-8 md:h-14 relative flex items-center  mx-2 select-none rounded-md">
+          <div className="w-24 h-8 md:w-44 md:h-14 relative flex items-center mx-2 select-none rounded-md">
             <JohnDeereLogo />
           </div>
         </section>
