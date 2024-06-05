@@ -6,6 +6,7 @@ import { Novatrix } from "uvcanvas";
 import styles from "../../styles/Hero.module.css";
 import { MapPinIcon } from "@heroicons/react/24/outline";
 import { Button } from "@nextui-org/react";
+import { JohnDeereLogo } from "../deere-logo";
 
 const InstrumentSerif = Instrument_Serif({
   weight: ["400"],
@@ -29,7 +30,7 @@ export function Hero() {
           InstrumentSerif.className,
           "text-4xl md:text-5xl text-gray-500 self-center w-full",
           "flex flex-wrap gap-x-3",
-          "mt-10 md:max-w-sm items-center leading-tight",
+          "mt-10 md:max-w-sm items-center leading-snug",
         )}
       >
         Hey,
@@ -43,9 +44,15 @@ export function Hero() {
         <span className={clsx(styles.heroGradient)}>
           a Frontend Developer
         </span>{" "}
-        at ?????? based in{" "}
+        at
+        <section className="relative inline-block">
+          <div className="w-44 h-8 md:h-14 relative flex items-center  mx-2 select-none rounded-md">
+            <JohnDeereLogo />
+          </div>
+        </section>
+        based in{" "}
         <span className="text-black">
-          Monterrey,
+          Monterrey,{" "}
           <section className="hidden relative md:inline-block mx-2">
             <div className="md:w-full h-8 md:h-10 relative select-none rounded-md">
               <MapPinIcon className="w-full h-full" />
