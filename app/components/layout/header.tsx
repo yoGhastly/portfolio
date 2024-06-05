@@ -23,6 +23,7 @@ export function Hero() {
     document.body.appendChild(link);
     link.click();
   };
+
   return (
     <header className="flex flex-col justify-center gap-3 md:gap-8 mx-auto px-8">
       <div
@@ -30,7 +31,11 @@ export function Hero() {
           InstrumentSerif.className,
           "text-4xl md:text-5xl text-gray-500 self-center w-full",
           "flex flex-wrap gap-x-3",
+<<<<<<< HEAD
           "mt-10 max-w-sm md:max-w-md items-center leading-snug",
+=======
+          "mt-10 md:max-w-sm items-center leading-snug"
+>>>>>>> 5cf04f5cf8f6c83a9b0762670a94c81b02c3ad7d
         )}
       >
         Hey,
@@ -41,17 +46,18 @@ export function Hero() {
           </div>
         </section>{" "}
         <span className="text-black">Diego</span>
-        <span className={clsx(styles.heroGradient)}>
-          a Frontend Developer
-        </span>{" "}
+        <span className={clsx(styles.heroGradient)}>a Frontend Developer</span>{" "}
         at
+<<<<<<< HEAD
         <section className="relative inline-block">
           <div
             className="relative flex items-center mx-2 select-none rounded-md"
             style={{ width: "200px", height: "50px" }}
           >
+=======
+        <section className="flex items-center w-48 h-auto relative inline-block">
+>>>>>>> 5cf04f5cf8f6c83a9b0762670a94c81b02c3ad7d
             <JohnDeereLogo />
-          </div>
         </section>
         based in{" "}
         <span className="text-black">
