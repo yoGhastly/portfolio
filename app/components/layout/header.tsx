@@ -30,7 +30,7 @@ export function Hero() {
           InstrumentSerif.className,
           "text-4xl md:text-5xl text-gray-500 self-center w-full",
           "flex flex-wrap gap-x-3",
-          "mt-10 md:max-w-sm items-center leading-snug",
+          "mt-10 max-w-sm md:max-w-md items-center leading-snug",
         )}
       >
         Hey,
@@ -46,7 +46,10 @@ export function Hero() {
         </span>{" "}
         at
         <section className="relative inline-block">
-          <div className="w-44 h-8 md:h-14 relative flex items-center  mx-2 select-none rounded-md">
+          <div
+            className="relative flex items-center mx-2 select-none rounded-md"
+            style={{ width: "200px", height: "50px" }}
+          >
             <JohnDeereLogo />
           </div>
         </section>
