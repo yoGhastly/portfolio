@@ -44,10 +44,8 @@ export function Hero() {
         <span className="text-black">Diego</span>
         <span className={clsx(styles.heroGradient)}>a Frontend Developer</span>{" "}
         at
-        <section className="relative inline-block">
-          <div className="w-24 h-8 md:w-44 md:h-14 relative flex items-center mx-2 select-none rounded-md">
+        <section className="flex items-center w-48 h-auto relative inline-block">
             <JohnDeereLogo />
-          </div>
         </section>
         based in{" "}
         <span className="text-black">
