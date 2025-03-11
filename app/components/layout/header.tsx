@@ -41,8 +41,8 @@ export function Hero() {
             <Novatrix />
           </div>
         </section>{" "}
-        <span className="text-black">Diego an </span>
-        <span className={clsx(styles.heroGradient)}>Operation Analyst</span>{" "}
+        <span className="text-black">Diego</span>
+        <span className={clsx(styles.heroGradient)}>an Operation Analyst</span>{" "}
         at
         <section className="relative inline-block">
           <div
