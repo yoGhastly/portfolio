@@ -24,13 +24,7 @@ export function About() {
           </p>
 
           <p className="text-gray-600">
-            I have experience working and collaborating on{" "}
-            <span className="bg-red-100 text-black">D&A teams</span> and
-            <span className="bg-amber-100 text-black">
-              {" "}
-              leading engineering{" "}
-            </span>
-            efforts. My experience spans developing{" "}
+            My experience spans developing{" "}
             <span className="text-black">
               ML models, optimizing retrieval-augmented generation (RAG) systems, and implementing dynamic data visualization solutions
             </span>
