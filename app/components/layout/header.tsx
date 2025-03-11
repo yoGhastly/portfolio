@@ -42,7 +42,7 @@ export function Hero() {
           </div>
         </section>{" "}
         <span className="text-black">Diego</span>
-        <span className={clsx(styles.heroGradient)}>a Frontend Developer</span>{" "}
+        <span className={clsx(styles.heroGradient)}>a Finance Operations Analyst</span>{" "}
         at
         <section className="relative inline-block">
           <div
