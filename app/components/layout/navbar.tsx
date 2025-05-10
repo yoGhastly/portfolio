@@ -28,10 +28,10 @@ export function Navbar() {
           Dribbble
         </Link>
         <Link
-          href="https://x.com/yoghastly_"
+          href="https://x.com/diego_jsx?s=21"
           className="text-neutral-500 underline-offset-4 hover:text-black hover:underline dark:text-neutral-400 dark:hover:text-neutral-300"
         >
-          X(Twitter)
+          X(Personal)
         </Link>
       </div>
     </nav>
